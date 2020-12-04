@@ -1,0 +1,136 @@
+:root {
+    --primary: #9465C6;
+    --primaryDark: #4c2a70;
+    --primaryLight: #b880f5;
+    --primaryLighten: #f5ebff;
+
+    --second: #57B847;
+    --secondDark: #2c7720;
+    --secondLight: #78e767;
+    --secondLighten: #d4ffcd;
+}
+
+#nama {
+    position: relative;
+    font-weight: 600;
+    font-family: Gadugi;
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: var(--primaryLighten);
+    padding: 10px 25px;
+    box-sizing: content-box;
+    border-bottom: 5px solid var(--primaryDark);
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+    animation: getar 0.5s ease-in;
+    animation-play-state: paused;
+}
+
+#nama:hover {
+    background-color: var(--primaryLight);
+}
+
+#nama:focus {
+    border-bottom: none;
+    background-color: var(--primaryLight);
+    transform: translateY(5px);
+}
+
+#mulaiBtn {
+    padding: 7px 30px;
+    border-radius: 30px;
+    box-sizing: content-box;
+    background-color: var(--second);
+    color: var(--secondLighten);
+    font-weight: 600;
+    border: none;
+    border-bottom: 5px solid var(--secondDark);
+    display: inline-block;
+    width: 200px;
+    transition: 0.2s ease-in;
+}
+
+#mulaiBtn:hover {
+    background-color: var(--secondLight);
+    cursor: pointer;
+    transform: translateY(5px);
+    border: none;
+}
+
+#mulaiBtn:active {
+    background-color: var(--secondLight);
+    transform: translateY(5px);
+    border: none;
+}
+
+@keyframes getar {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    85% {
+        transform: translateX(-10px);
+    }
+
+    95% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#okeSetting {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem !important;
+    border-bottom: 5px solid var(--primaryDark);
+    transition: 0.2s;
+}
+
+#okeSetting:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    border-bottom: none;
+    transform: translateY(5px);
+}
+
+#okeSetting:active {
+    cursor: pointer;
+    background-color: var(--primary);
+    border-bottom: none;
+    transform: translateY(5px);
+}
+
+/* ================================================== RESPONSIVE ================================================== */
+@media (max-width:667px) {
+    #okeSetting {
+        font-size: 0.5rem !important;
+        border-bottom: 2px solid var(--primaryDark);
+    }
+}
+
+@media (max-width:1024px) {
+    #okeSetting {
+        font-size: 0.8rem !important;
+        border-bottom: 4px solid var(--primaryDark);
+    }
+}
